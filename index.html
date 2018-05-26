@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Word Counter</title>
+	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+
+</head>
+<body>
+	<h1><b>Word Counter</b></h1>
+	
+		<h3>Tempat untuk membantu kamu menghitung jumlah kata di essay mu^^</h3>
+	<section>
+		<p>
+			<label for="esay"><b>Post your esay here!!</b></label><br>
+			<textarea rows="20" cols="70" placeholder="Post Here!" id="esay"></textarea>
+		</p>
+		<a onclick="counting(esay)">Start Counting</a>
+		<p><b>Numbers of Word:</b></p>
+		<p id="numberWords"><b></b></p>
+	</section>
+
+	<script>
+		function counting(){
+
+			var essay = document.getElementById("esay").value;
+
+			var word = essay.toString();
+			var count = word.split(' ')
+			var hasil = count.length
+			document.getElementById("numberWords").innerHTML = hasil
+		}
+	</script>
+
+</body>
+</html>
